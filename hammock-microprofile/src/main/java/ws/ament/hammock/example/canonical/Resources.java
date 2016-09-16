@@ -19,15 +19,30 @@
 package ws.ament.hammock.example.canonical;
 
 import org.apache.cxf.jaxrs.swagger.Swagger2Feature;
+import org.apache.deltaspike.core.api.config.ConfigProperty;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 
 public class Resources {
     @ApplicationScoped
     public static class SwaggerComponent extends Swagger2Feature {
-        public SwaggerComponent() {
-            super.setContact("Hammock Project");
-            super.setTitle("Microprofile Canonical Project");
+        @Inject
+        @ConfigProperty(name="swagger.contact")
+        private String contact;
+        @Inject
+        @ConfigProperty(name="swagger.title")
+        private String title;
+        @Inject
+        @ConfigProperty(name="swagger.description")
+        private String description;
+
+        @PostConstruct
+        public void setupSwagger() {
+            super.setContact(contact);
+            super.setTitle(title);
+            super.setDescription(description);
         }
     }
 }
