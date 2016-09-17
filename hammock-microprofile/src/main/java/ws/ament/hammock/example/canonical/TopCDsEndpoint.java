@@ -21,7 +21,6 @@ package ws.ament.hammock.example.canonical;
 import io.swagger.annotations.Api;
 
 import javax.enterprise.context.RequestScoped;
-import javax.inject.Inject;
 import javax.json.Json;
 import javax.json.JsonArrayBuilder;
 import javax.ws.rs.GET;
