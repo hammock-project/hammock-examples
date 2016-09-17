@@ -32,13 +32,13 @@
 
     <dependencies>
         <dependency>
-            <groupId>ws.ament.hammock</groupId>
-            <artifactId>web-undertow</artifactId>
-            <version>${hammock.version}</version>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
+            <version>3.3.0.Final</version>
         </dependency>
         <dependency>
             <groupId>ws.ament.hammock</groupId>
-            <artifactId>security-spi</artifactId>
+            <artifactId>web-undertow</artifactId>
             <version>${hammock.version}</version>
         </dependency>
         <dependency>
