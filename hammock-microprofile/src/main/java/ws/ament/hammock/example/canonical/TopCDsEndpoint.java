@@ -19,6 +19,7 @@
 package ws.ament.hammock.example.canonical;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 import javax.enterprise.context.RequestScoped;
 import javax.json.Json;
@@ -41,6 +42,7 @@ public class TopCDsEndpoint {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @ApiOperation("List top CDs")
     public String getTopCDs() {
 
         final JsonArrayBuilder array = Json.createArrayBuilder();
