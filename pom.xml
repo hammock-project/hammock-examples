@@ -32,5 +32,6 @@
     <modules>
         <module>hammock-diy</module>
         <module>hammock-microprofile</module>
+        <module>hammock-cqrs</module>
     </modules>
 </project>
