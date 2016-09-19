@@ -18,12 +18,11 @@
 
 package ws.ament.hammock.cqrs.mapping;
 
-import ws.ament.hammock.cqrs.domain.ViolationException;
-import ws.ament.hammock.cqrs.domain.Violations;
 import ws.ament.hammock.cqrs.stereotype.Mapper;
 
-import javax.inject.Inject;
 import javax.validation.ConstraintViolationException;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
@@ -31,10 +30,9 @@ import javax.ws.rs.ext.Provider;
 @Provider
 @Mapper
 public class ConstraintViolationExceptionMapper implements ExceptionMapper<ConstraintViolationException> {
-    @Inject
-    private ExceptionMapper<ViolationException> violationExceptionExceptionMapper;
     @Override
     public Response toResponse(ConstraintViolationException e) {
-        return violationExceptionExceptionMapper.toResponse(new ViolationException(new Violations(e.getConstraintViolations())));
+        Entity entity = Entity.entity(e.getMessage(), MediaType.TEXT_PLAIN_TYPE);
+        return Response.status(Response.Status.BAD_REQUEST).entity(entity).build();
     }
 }

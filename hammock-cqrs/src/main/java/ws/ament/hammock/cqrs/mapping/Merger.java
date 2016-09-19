@@ -20,6 +20,7 @@ package ws.ament.hammock.cqrs.mapping;
 
 import java.util.function.BiConsumer;
 
+@FunctionalInterface
 public interface Merger<T,U> extends BiConsumer<T,U> {
 
     default void merge(T t, U u) {
