@@ -23,7 +23,9 @@ import java.util.function.BiConsumer;
 @FunctionalInterface
 public interface Merger<T,U> extends BiConsumer<T,U> {
 
-    default void merge(T t, U u) {
-        this.accept(t,u);
+    void merge(T t, U u);
+
+    default void accept(T t, U u) {
+        this.merge(t,u);
     }
 }

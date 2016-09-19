@@ -25,7 +25,9 @@ import ws.ament.hammock.cqrs.stereotype.Mapper;
 @Mapper
 public class UpdateBookMerger implements Merger<BookEntity, UpdateBook> {
     @Override
-    public void accept(BookEntity bookEntity, UpdateBook updateBook) {
-
+    public void merge(BookEntity bookEntity, UpdateBook updateBook) {
+        bookEntity.setTitle(updateBook.getTitle());
+        bookEntity.setAuthorId(updateBook.getAuthor());
+        bookEntity.setPageCount(updateBook.getPageCount());
     }
 }

@@ -1,0 +1,98 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Hammock CQRS",
+		"_postman_id": "00425f74-6d42-31c8-f915-8f13a80f5809",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Book",
+			"request": {
+				"url": "http://localhost:8080/books",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\":\"Bob Hope\",\n\t\"title\":\"To Build A Microservice\",\n\t\"pageCount\":55,\n\t\"chapters\":[\n\t\t{\n\t\t\t\"number\":1,\n\t\t\t\"title\":\"How to do it\",\n\t\t\t\"startPage\":1,\n\t\t\t\"endPage\":55\n\t\t}\n\t\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Publish Book",
+			"request": {
+				"url": "http://localhost:8080/books/{bookId}/publication",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book Details",
+			"request": {
+				"url": "http://localhost:8080/books/fb5b3660-b998-4a4c-868a-a150d0b63b2c",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book List",
+			"request": {
+				"url": "http://localhost:8080/books/",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"url": "http://localhost:8080/books/950d510a-998b-4d2b-8e0d-3d6f3079875e",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\":\"Bob Hope The Second\",\n\t\"title\":\"To Build A Microservice\",\n\t\"pageCount\":55\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

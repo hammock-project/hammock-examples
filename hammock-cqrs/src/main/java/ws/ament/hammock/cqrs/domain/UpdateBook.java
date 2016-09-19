@@ -20,10 +20,6 @@ package ws.ament.hammock.cqrs.domain;
 
 import org.apache.johnzon.mapper.JohnzonProperty;
 
-import java.util.Collections;
-import java.util.Set;
-import java.util.stream.Stream;
-
 public class UpdateBook {
     private String bookId;
     @JohnzonProperty("author")
@@ -32,8 +28,6 @@ public class UpdateBook {
     private String title;
     @JohnzonProperty("pageCount")
     private int pageCount;
-    @JohnzonProperty("chapters")
-    private Set<ChapterDefinition> chapters;
 
     public String getBookId() {
         return bookId;
@@ -67,15 +61,4 @@ public class UpdateBook {
         this.pageCount = pageCount;
     }
 
-    public void setChapters(Set<ChapterDefinition> chapters) {
-        this.chapters = chapters;
-    }
-
-    public Set<ChapterDefinition> getChapters() {
-        return Collections.unmodifiableSet(chapters);
-    }
-
-    public Stream<ChapterDefinition> chapters() {
-        return getChapters().stream();
-    }
 }
