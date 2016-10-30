@@ -23,6 +23,7 @@ import ws.ament.hammock.cqrs.service.UpdateBookService;
 import ws.ament.hammock.cqrs.stereotype.RestController;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
@@ -39,7 +40,7 @@ public class UpdateBookController {
 
     @PUT
     @Path("/{bookId}")
-    public Response updateBook(@PathParam("bookId") String bookId, UpdateBook updateBook) {
+    public Response updateBook(@PathParam("bookId") String bookId, @Valid UpdateBook updateBook) {
         updateBook.setBookId(bookId);
         updateBookService.updateBook(updateBook);
         return Response.accepted().build();

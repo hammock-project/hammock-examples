@@ -20,10 +20,15 @@ package ws.ament.hammock.cqrs.domain;
 
 import org.apache.johnzon.mapper.JohnzonProperty;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class UpdateBook {
     private String bookId;
+    @NotNull
     @JohnzonProperty("author")
     private String author;
+    @Size(min = 1, max = 200)
     @JohnzonProperty("title")
     private String title;
     @JohnzonProperty("pageCount")
