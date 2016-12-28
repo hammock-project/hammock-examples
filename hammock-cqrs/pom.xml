@@ -67,9 +67,9 @@
             <version>${deltaspike.version}</version>
         </dependency>
         <dependency>
-            <groupId>ws.ament.hammock</groupId>
-            <artifactId>jpa-hibernate</artifactId>
-            <version>${hammock.version}</version>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.2.5.Final</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>

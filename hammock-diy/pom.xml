@@ -46,6 +46,11 @@
             <artifactId>rest-resteasy</artifactId>
             <version>${hammock.version}</version>
         </dependency>
+        <dependency>
+            <groupId>ws.ament.hammock</groupId>
+            <artifactId>bootstrap-weld</artifactId>
+            <version>${hammock.version}</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

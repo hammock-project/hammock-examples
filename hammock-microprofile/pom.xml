@@ -37,7 +37,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-rs-service-description-swagger</artifactId>
-            <version>3.1.7</version>
+            <version>3.1.9</version>
         </dependency>
     </dependencies>
     <build>
@@ -49,57 +49,6 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <!--<plugin>-->
-                <!--<groupId>com.github.kongchen</groupId>-->
-                <!--<artifactId>swagger-maven-plugin</artifactId>-->
-                <!--<version>3.1.4</version>-->
-                <!--<configuration>-->
-                    <!--<apiSources>-->
-                        <!--<apiSource>-->
-                            <!--<springmvc>false</springmvc>-->
-                            <!--<locations>-->
-                                <!--<location>ws.ament.hammock.example.canonical</location>-->
-                            <!--</locations>-->
-                            <!--<schemes>-->
-                                <!--<scheme>http</scheme>-->
-                            <!--</schemes>-->
-                            <!--<host>www.example.com:8080</host>-->
-                            <!--<basePath>/</basePath>-->
-                            <!--<info>-->
-                                <!--<title>Swagger Maven Plugin Sample</title>-->
-                                <!--<version>v1</version>-->
-                                <!--&lt;!&ndash; use markdown here because I'm using markdown for output,-->
-                                <!--if you need to use html or other markup language, you need to use your target language,-->
-                                 <!--and note escape your description for xml &ndash;&gt;-->
-                                <!--<description>-->
-                                    <!--This is a sample.-->
-                                <!--</description>-->
-                                <!--<termsOfService>-->
-                                    <!--http://www.github.com/kongchen/swagger-maven-plugin-->
-                                <!--</termsOfService>-->
-                                <!--<contact>-->
-                                    <!--<email>kongchen@gmail.com</email>-->
-                                    <!--<name>Kong Chen</name>-->
-                                    <!--<url>http://kongch.com</url>-->
-                                <!--</contact>-->
-                                <!--<license>-->
-                                    <!--<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>-->
-                                    <!--<name>Apache 2.0</name>-->
-                                <!--</license>-->
-                            <!--</info>-->
-                            <!--<swaggerDirectory>${basedir}/src/main/resources/swagger</swaggerDirectory>-->
-                        <!--</apiSource>-->
-                    <!--</apiSources>-->
-                <!--</configuration>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<phase>compile</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>generate</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-            <!--</plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
