@@ -30,16 +30,36 @@
     <artifactId>hammock-microprofile</artifactId>
     <dependencies>
         <dependency>
-            <groupId>ws.ament.hammock</groupId>
-            <artifactId>dist-microprofile</artifactId>
-            <version>${hammock.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-rs-service-description-swagger</artifactId>
             <version>3.1.9</version>
         </dependency>
     </dependencies>
+    <profiles>
+        <profile>
+            <id>weld</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>ws.ament.hammock</groupId>
+                    <artifactId>dist-microprofile</artifactId>
+                    <version>${hammock.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>owb</id>
+            <dependencies>
+                <dependency>
+                    <groupId>ws.ament.hammock</groupId>
+                    <artifactId>dist-microprofile-cochise</artifactId>
+                    <version>${hammock.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
     <build>
         <plugins>
             <plugin>
