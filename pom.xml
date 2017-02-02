@@ -27,7 +27,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
-        <hammock.version>1.1-SNAPSHOT</hammock.version>
+        <hammock.version>1.1</hammock.version>
     </properties>
     <modules>
         <module>hammock-diy</module>
