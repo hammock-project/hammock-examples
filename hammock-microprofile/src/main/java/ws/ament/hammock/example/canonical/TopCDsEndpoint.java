@@ -37,7 +37,7 @@ import java.util.logging.Logger;
 @Path("/")
 @RequestScoped
 @Api("/")
-`@Counted(absolute = true,monotonic = true)
+@Counted(absolute = true,monotonic = true)
 public class TopCDsEndpoint {
 
     private Logger logger = Logger.getLogger(TopCDsEndpoint.class.getName());
