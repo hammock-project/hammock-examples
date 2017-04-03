@@ -18,6 +18,7 @@
 
 package ws.ament.hammock.example.canonical;
 
+import com.codahale.metrics.annotation.Counted;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
@@ -36,6 +37,7 @@ import java.util.logging.Logger;
 @Path("/")
 @RequestScoped
 @Api("/")
+`@Counted(absolute = true,monotonic = true)
 public class TopCDsEndpoint {
 
     private Logger logger = Logger.getLogger(TopCDsEndpoint.class.getName());
