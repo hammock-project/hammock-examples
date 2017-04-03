@@ -27,7 +27,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
-        <hammock.version>1.3-SNAPSHOT</hammock.version>
+        <hammock.version>1.2.1</hammock.version>
         <capsule.maven.plugin.version>1.5.1</capsule.maven.plugin.version>
     </properties>
     <modules>
