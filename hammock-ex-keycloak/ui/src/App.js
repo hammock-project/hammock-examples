@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import logo from './logo.svg'
 import Keycloak from 'keycloak-js'
 import './App.css'
 import { Button, Modal } from 'react-bootstrap'
@@ -13,7 +12,7 @@ class App extends Component {
             realm: 'master',
             clientId: 'test-client'
         });
-        this.state = { showModal: false }
+        this.state = { showModal: false, msg: '' }
         var kc = this.kc
         kc.init({onLoad: 'login-required'}).success(function(authenticated) {
             console.log(kc.subject)
