@@ -34,5 +34,6 @@
         <module>hammock-diy</module>
         <module>hammock-microprofile</module>
         <module>hammock-cqrs</module>
+        <module>hammock-ex-keycloak</module>
     </modules>
 </project>
