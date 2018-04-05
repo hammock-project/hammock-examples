@@ -31,8 +31,9 @@
     <properties>
         <deltaspike.version>1.7.1</deltaspike.version>
         <h2.version>1.4.189</h2.version>
-        <cxf.version>3.1.10</cxf.version>
-        <hibernate-validator.version>5.2.4.Final</hibernate-validator.version>
+        <cxf.version>3.2.2</cxf.version>
+        <hibernate-validator.version>6.0.7.Final</hibernate-validator.version>
+        <hibernate.version>5.2.13.Final</hibernate.version>
     </properties>
     <dependencies>
         <dependency>
@@ -52,6 +53,11 @@
             </exclusions>
         </dependency>
         <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.el</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator-cdi</artifactId>
             <version>${hibernate-validator.version}</version>
@@ -69,7 +75,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.2.5.Final</version>
+            <version>${hibernate.version}</version>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -96,7 +102,7 @@
                             <goal>build</goal>
                         </goals>
                         <configuration>
-                            <appClass>ws.ament.hammock.Bootstrap</appClass>
+                            <appClass>ws.ament.hammock.cqrs.Application</appClass>
                             <type>fat</type>
                         </configuration>
                     </execution>

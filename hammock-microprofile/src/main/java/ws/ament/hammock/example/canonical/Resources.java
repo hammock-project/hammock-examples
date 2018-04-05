@@ -19,7 +19,7 @@
 package ws.ament.hammock.example.canonical;
 
 import org.apache.cxf.jaxrs.swagger.Swagger2Feature;
-import org.apache.deltaspike.core.api.config.ConfigProperty;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;

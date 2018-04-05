@@ -32,21 +32,11 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-rs-service-description-swagger</artifactId>
-            <version>3.1.12</version>
+            <version>3.2.4</version>
         </dependency>
         <dependency>
             <groupId>ws.ament.hammock</groupId>
             <artifactId>util-metrics</artifactId>
-            <version>${hammock.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ws.ament.hammock</groupId>
-            <artifactId>util-beanvalidation</artifactId>
-            <version>${hammock.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ws.ament.hammock</groupId>
-            <artifactId>util-brave</artifactId>
             <version>${hammock.version}</version>
         </dependency>
     </dependencies>
@@ -60,6 +50,11 @@
                 <dependency>
                     <groupId>ws.ament.hammock</groupId>
                     <artifactId>dist-microprofile</artifactId>
+                    <version>${hammock.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>ws.ament.hammock</groupId>
+                    <artifactId>util-weld-probe</artifactId>
                     <version>${hammock.version}</version>
                 </dependency>
             </dependencies>
